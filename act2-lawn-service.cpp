@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 
 int prompt_user () {
 	std::cout << "Welcome to Tom and Jerry Lawn Service" << "\n";
@@ -12,7 +11,6 @@ int prompt_user () {
 	std::cin >> user_choice;
 	return user_choice;	
 }
-
 int mowing() {
 	std::cout << "You picked our Mowing Service" << "\n";
 	int square_yards;
@@ -21,12 +19,12 @@ int mowing() {
 	int mowing_cost = 2100; 
 	int total_mowing_cost;
 	if(square_yards <= 5000) {
-		total_mowing_cost = mowing_cost;		
-		std::cout << total_mowing_cost << "\n";
+		total_mowing_cost = mowing_cost;	
+		std::cout << "total cost: " << total_mowing_cost << " php" << "\n";
 	} else {
 		total_mowing_cost = square_yards * mowing_cost;
 		total_mowing_cost = total_mowing_cost / 5000;
-		std::cout << total_mowing_cost << "\n";
+		std::cout << "total cost: " << total_mowing_cost << " php" << "\n";
 	}
 	return total_mowing_cost;	
 }
@@ -40,10 +38,10 @@ int fertilizing() {
 	int total_fertilizing_cost;
 	if(application_of_fertilizer <= 1) {
 		total_fertilizing_cost = fertilizing_cost;
-		std::cout << total_fertilizing_cost << "\n";
+		std::cout << "total cost: " << total_fertilizing_cost << " php" << "\n";
 	} else {
 		total_fertilizing_cost = application_of_fertilizer * fertilizing_cost;
-		std::cout << total_fertilizing_cost << "\n";
+		std::cout << "total cost: " << total_fertilizing_cost << " php" << "\n";
 	}
 	return total_fertilizing_cost;
 } 
@@ -57,10 +55,10 @@ int tree_planting() {
 	int total_cost_per_tree;
 	if(amount_of_tree <= 1) {
 		total_cost_per_tree = cost_per_tree;
-		std::cout << total_cost_per_tree << "\n";
+		std::cout << "total cost: " << total_cost_per_tree << " php" << "\n";
 	} else {
 		total_cost_per_tree = amount_of_tree * cost_per_tree;
-		std::cout << total_cost_per_tree << "\n";
+		std::cout << "total cost: " << total_cost_per_tree << " php" << "\n";
 	}
 	return total_cost_per_tree;
 }
